@@ -24,7 +24,7 @@ entropyx.init_console_panic_hook();
     const address = args.address ?? "entropyxtest:qz7ulu4c25dh7fzec9zjyrmlhnkzrg4wmf89q7gzr3gfrsj3uz6xjceef60sd";
 
     const rpc = new RpcClient({
-        url : "127.0.0.1",
+        url : "0.0.0.0",
         encoding,
         networkId
     });

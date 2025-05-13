@@ -18,7 +18,7 @@ const {
 (async () => {
 
     const rpc = new RpcClient({
-        // url : "127.0.0.1",
+        // url : "0.0.0.0",
         // encoding,
         resolver: new Resolver(),
         networkId

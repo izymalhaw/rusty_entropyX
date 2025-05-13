@@ -63,7 +63,7 @@ async fn daemon_mining_test() {
     let rpc_client1 = entropyx1.start().await;
     let rpc_client2 = entropyx2.start().await;
 
-    rpc_client2.add_peer(format!("127.0.0.1:{}", entropyx1.p2p_port).try_into().unwrap(), true).await.unwrap();
+    rpc_client2.add_peer(format!("0.0.0.0:{}", entropyx1.p2p_port).try_into().unwrap(), true).await.unwrap();
     tokio::time::sleep(Duration::from_secs(1)).await; // Let it connect
     assert_eq!(rpc_client2.get_connected_peer_info().await.unwrap().peer_info.len(), 1);
 
@@ -153,7 +153,7 @@ async fn daemon_utxos_propagation_test() {
     rpc_client1.start_notify(Default::default(), VirtualDaaScoreChangedScope {}.into()).await.unwrap();
 
     // Connect entropyx2 to entropyx1
-    rpc_client2.add_peer(format!("127.0.0.1:{}", entropyx1.p2p_port).try_into().unwrap(), true).await.unwrap();
+    rpc_client2.add_peer(format!("0.0.0.0:{}", entropyx1.p2p_port).try_into().unwrap(), true).await.unwrap();
     let check_client = rpc_client2.clone();
     wait_for(
         50,

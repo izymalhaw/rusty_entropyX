@@ -183,7 +183,7 @@ impl Inner {
 /// let rpc = new RpcClient({
 ///    // if port is not provided it will default
 ///    // to the default port for the networkId
-///    url : "127.0.0.1",
+///    url : "0.0.0.0",
 ///    networkId : "mainnet",
 /// });
 /// ```

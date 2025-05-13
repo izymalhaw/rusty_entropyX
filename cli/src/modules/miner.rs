@@ -7,7 +7,7 @@ pub use workflow_node::process::Event;
 pub enum MinerSettings {
     #[describe("Binary location")]
     Location,
-    #[describe("gRPC server (default: 127.0.0.1)")]
+    #[describe("gRPC server (default: 0.0.0.0)")]
     Server,
     #[describe("Miner throttle (milliseconds, default: 5,000; lower = higher CPU usage)")]
     Throttle,
@@ -18,7 +18,7 @@ pub enum MinerSettings {
 #[async_trait]
 impl DefaultSettings for MinerSettings {
     async fn defaults() -> Vec<(Self, Value)> {
-        let mut settings = vec![(Self::Server, to_value("127.0.0.1").unwrap()), (Self::Mute, to_value(true).unwrap())];
+        let mut settings = vec![(Self::Server, to_value("0.0.0.0").unwrap()), (Self::Mute, to_value(true).unwrap())];
 
         let root = nw_sys::app::folder();
         if let Ok(binaries) = locate_binaries(&root, "entropyx-cpu-miner").await {
@@ -88,7 +88,7 @@ impl Miner {
             .ok_or_else(|| Error::Custom("No miner binary specified, please use `miner select` to select a binary.".into()))?;
         let network_id = ctx.wallet().network_id()?;
         let address = ctx.account().await?.receive_address()?;
-        let server: String = self.settings.get(MinerSettings::Server).unwrap_or("127.0.0.1".to_string());
+        let server: String = self.settings.get(MinerSettings::Server).unwrap_or("0.0.0.0".to_string());
         let throttle: usize = self.settings.get(MinerSettings::Throttle).unwrap_or(5_000);
         let mute = self.mute.load(Ordering::SeqCst);
         let config = CpuMinerConfig::new(location.as_str(), network_id.into(), address, server, throttle, mute);

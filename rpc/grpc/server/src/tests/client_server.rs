@@ -208,7 +208,7 @@ async fn create_client(server_address: NetAddress) -> GrpcClient {
 }
 
 fn get_free_net_address() -> NetAddress {
-    let socket = std::net::TcpListener::bind("127.0.0.1:0").unwrap();
+    let socket = std::net::TcpListener::bind("0.0.0.0:0").unwrap();
     let port = socket.local_addr().unwrap().port();
     drop(socket);
     ContextualNetAddress::unspecified().normalize(port)

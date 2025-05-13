@@ -31,7 +31,7 @@ const { encoding, networkId, address : destinationAddress } = require("../utils"
 
     // 1) Initialize RPC
     const rpc = new RpcClient({
-        url : "127.0.0.1",
+        url : "0.0.0.0",
         encoding,
         networkId
     });

@@ -190,7 +190,7 @@ mod tests {
 
             [[resolver]]
             enable = true
-            address = "http://127.0.0.1:8888"
+            address = "http://0.0.0.0:8888"
         "#;
 
         let urls = try_parse_resolvers(toml).expect("TOML: Unable to parse RPC Resolver list");

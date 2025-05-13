@@ -30,12 +30,12 @@ struct Args {
     #[clap(long)]
     devnet: bool,
 
-    /// proxy:port for gRPC server (grpc://127.0.0.1:16110)
+    /// proxy:port for gRPC server (grpc://0.0.0.0:16110)
     #[clap(name = "grpc")]
     grpc_proxy_address: Option<String>,
 
     // /// wRPC port
-    /// interface:port for wRPC server (wrpc://127.0.0.1:17110)
+    /// interface:port for wRPC server (wrpc://0.0.0.0:17110)
     #[clap(long)]
     interface: Option<String>,
     /// Number of notification serializer threads
@@ -72,8 +72,8 @@ async fn main() -> Result<()> {
     };
 
     let options = Arc::new(Options {
-        listen_address: interface.unwrap_or_else(|| format!("wrpc://127.0.0.1:{proxy_port}")),
-        grpc_proxy_address: Some(grpc_proxy_address.unwrap_or_else(|| format!("grpc://127.0.0.1:{entropyx_port}"))),
+        listen_address: interface.unwrap_or_else(|| format!("wrpc://0.0.0.0:{proxy_port}")),
+        grpc_proxy_address: Some(grpc_proxy_address.unwrap_or_else(|| format!("grpc://0.0.0.0:{entropyx_port}"))),
         verbose,
         // ..Options::default()
     });

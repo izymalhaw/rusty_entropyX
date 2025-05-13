@@ -26,7 +26,7 @@ entropyx.init_console_panic_hook();
     } = parseArgs();
 
     const rpc = new RpcClient({
-        url : "127.0.0.1",
+        url : "0.0.0.0",
         encoding,
         networkId
     });

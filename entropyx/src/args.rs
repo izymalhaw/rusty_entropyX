@@ -518,7 +518,7 @@ fn arg_match_many_unwrap_or<T: Clone + Send + Sync + 'static>(m: &clap::ArgMatch
       --dnsseed=                            Override DNS seeds with specified hostname (Only 1 hostname allowed)
       --grpcseed=                           Hostname of gRPC server for seeding peers
       --externalip=                         Add an ip to the list of local addresses we claim to listen on to peers
-      --proxy=                              Connect via SOCKS5 proxy (eg. 127.0.0.1:9050)
+      --proxy=                              Connect via SOCKS5 proxy (eg. 0.0.0.0:9050)
       --proxyuser=                          Username for proxy server
       --proxypass=                          Password for proxy server
       --dbtype=                             Database backend to use for the Block DAG

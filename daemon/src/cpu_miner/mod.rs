@@ -67,7 +67,7 @@ impl TryFrom<CpuMinerConfig> for Vec<String> {
             }
         }
 
-        let server = args.server.unwrap_or("127.0.0.1".to_string());
+        let server = args.server.unwrap_or("0.0.0.0".to_string());
         let server = format!("--entropyx-address={server}");
         argv.push(server.as_str());
 

@@ -119,7 +119,7 @@ impl Node {
                     .transpose()?
                 {
                     // log_info!("connecting to url: {}", url);
-                    if url.contains("127.0.0.1") || url.contains("localhost") {
+                    if url.contains("0.0.0.0") || url.contains("localhost") {
                         spawn(async move {
                             let options = ConnectOptions {
                                 block_async_connect: true,

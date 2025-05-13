@@ -99,16 +99,16 @@ pub struct Daemon {
 impl Daemon {
     pub fn fill_args_with_random_ports(args: &mut Args) {
         // This should ask the OS to allocate free port for socket 1 to 4.
-        let socket1 = std::net::TcpListener::bind(format!("127.0.0.1:{}", args.rpclisten.map_or(0, |x| x.normalize(0).port))).unwrap();
+        let socket1 = std::net::TcpListener::bind(format!("0.0.0.0:{}", args.rpclisten.map_or(0, |x| x.normalize(0).port))).unwrap();
         let rpc_port = socket1.local_addr().unwrap().port();
 
-        let socket2 = std::net::TcpListener::bind(format!("127.0.0.1:{}", args.listen.map_or(0, |x| x.normalize(0).port))).unwrap();
+        let socket2 = std::net::TcpListener::bind(format!("0.0.0.0:{}", args.listen.map_or(0, |x| x.normalize(0).port))).unwrap();
         let p2p_port = socket2.local_addr().unwrap().port();
 
-        let socket3 = std::net::TcpListener::bind("127.0.0.1:0").unwrap();
+        let socket3 = std::net::TcpListener::bind("0.0.0.0:0").unwrap();
         let rpc_json_port = socket3.local_addr().unwrap().port();
 
-        let socket4 = std::net::TcpListener::bind("127.0.0.1:0").unwrap();
+        let socket4 = std::net::TcpListener::bind("0.0.0.0:0").unwrap();
         let rpc_borsh_port = socket4.local_addr().unwrap().port();
 
         drop(socket1);

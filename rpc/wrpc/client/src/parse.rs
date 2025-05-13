@@ -162,7 +162,7 @@ mod tests {
 
     #[test]
     fn parse_host_ip_v4_loopback() {
-        let input = "127.0.0.1";
+        let input = "0.0.0.0";
         let output = parse_host(input).unwrap();
         assert_eq!(output.scheme, None);
         assert_eq!(output.host, Host::Ipv4(Ipv4Addr::new(127, 0, 0, 1)));
@@ -180,7 +180,7 @@ mod tests {
 
     #[test]
     fn parse_host_ip_v4_with_port() {
-        let input = "127.0.0.1:8080";
+        let input = "0.0.0.0:8080";
         let output = parse_host(input).unwrap();
         assert_eq!(output.scheme, None);
         assert_eq!(output.host, Host::Ipv4(Ipv4Addr::new(127, 0, 0, 1)));
@@ -189,7 +189,7 @@ mod tests {
 
     #[test]
     fn parse_host_ip_v4_with_port_and_loopback() {
-        let input = "ws://127.0.0.1:8080";
+        let input = "ws://0.0.0.0:8080";
         let output = parse_host(input).unwrap();
         assert_eq!(output.scheme, Some("ws"));
         assert_eq!(output.host, Host::Ipv4(Ipv4Addr::new(127, 0, 0, 1)));

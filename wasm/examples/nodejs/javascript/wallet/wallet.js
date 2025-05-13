@@ -97,7 +97,7 @@ setDefaultStorageFolder(storageFolder);
             resident: false, 
             encoding: "borsh",
             networkId: "mainnet", 
-            url: "ws://127.0.0.1:17110"
+            url: "ws://0.0.0.0:17110"
         });
         //console.log("wallet", wallet)
         // Ensure wallet file

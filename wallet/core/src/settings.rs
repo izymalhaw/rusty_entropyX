@@ -18,7 +18,7 @@ use workflow_store::fs;
 pub enum WalletSettings {
     #[describe("Network type (mainnet|testnet-10|testnet-11)")]
     Network,
-    #[describe("Server address (default: 127.0.0.1)")]
+    #[describe("Server address (default: 0.0.0.0)")]
     Server,
     #[describe("Wallet storage or file name (default 'entropyx')")]
     Wallet,

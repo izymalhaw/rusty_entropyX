@@ -33,7 +33,7 @@ const { networkId, encoding } = require("../utils").parseArgs();
     console.info(address);
 
     const rpc = new RpcClient({
-        //url : "127.0.0.1",
+        //url : "0.0.0.0",
         resolver: new Resolver(),
         encoding,
         networkId

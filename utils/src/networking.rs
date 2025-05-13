@@ -456,11 +456,11 @@ mod tests {
 
     #[test]
     fn test_contextual_address_ser() {
-        let addr = IpAddress::from_str("127.0.0.1").unwrap();
+        let addr = IpAddress::from_str("0.0.0.0").unwrap();
         let port = Some(1234);
         let net_addr = ContextualNetAddress::new(addr, port);
         let s = serde_json::to_string(&net_addr).unwrap();
-        assert_eq!(s, r#"{"ip":"127.0.0.1","port":1234}"#);
+        assert_eq!(s, r#"{"ip":"0.0.0.0","port":1234}"#);
     }
 
     #[test]
@@ -484,7 +484,7 @@ mod tests {
         assert!(IpAddress::from_str("2001:db9::").unwrap().is_publicly_routable());
 
         // Localhost
-        assert!(!IpAddress::from_str("127.0.0.1").unwrap().is_publicly_routable());
+        assert!(!IpAddress::from_str("0.0.0.0").unwrap().is_publicly_routable());
 
         // Some random routable IP
         assert!(IpAddress::from_str("123.45.67.89").unwrap().is_publicly_routable());

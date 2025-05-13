@@ -25,7 +25,7 @@ const { encoding, networkId } = require("../utils").parseArgs();
     console.info(`Full entropyx address: ${sourceAddress}`);
 
     const rpc = new RpcClient({
-        url : "127.0.0.1",
+        url : "0.0.0.0",
         encoding,
         networkId
     });

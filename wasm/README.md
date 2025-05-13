@@ -172,7 +172,7 @@ let {
 ```javascript
 // if port is not specified, it will use the default port for the specified network
 const rpc = new RpcClient({
-    url: "127.0.0.1", 
+    url: "0.0.0.0", 
     encoding: Encoding.Borsh, 
     network : "testnet-10"
 });
