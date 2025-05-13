@@ -1,0 +1,11 @@
+/home/izy/ubuntu/rusty_entropyX/entropyx-node/target/debug/deps/libconvert_case-974eaff0f9c1d244.rmeta: /home/izy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/convert_case-0.5.0/src/lib.rs /home/izy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/convert_case-0.5.0/src/case.rs /home/izy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/convert_case-0.5.0/src/converter.rs /home/izy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/convert_case-0.5.0/src/pattern.rs /home/izy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/convert_case-0.5.0/src/segmentation.rs
+
+/home/izy/ubuntu/rusty_entropyX/entropyx-node/target/debug/deps/libconvert_case-974eaff0f9c1d244.rlib: /home/izy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/convert_case-0.5.0/src/lib.rs /home/izy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/convert_case-0.5.0/src/case.rs /home/izy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/convert_case-0.5.0/src/converter.rs /home/izy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/convert_case-0.5.0/src/pattern.rs /home/izy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/convert_case-0.5.0/src/segmentation.rs
+
+/home/izy/ubuntu/rusty_entropyX/entropyx-node/target/debug/deps/convert_case-974eaff0f9c1d244.d: /home/izy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/convert_case-0.5.0/src/lib.rs /home/izy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/convert_case-0.5.0/src/case.rs /home/izy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/convert_case-0.5.0/src/converter.rs /home/izy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/convert_case-0.5.0/src/pattern.rs /home/izy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/convert_case-0.5.0/src/segmentation.rs
+
+/home/izy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/convert_case-0.5.0/src/lib.rs:
+/home/izy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/convert_case-0.5.0/src/case.rs:
+/home/izy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/convert_case-0.5.0/src/converter.rs:
+/home/izy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/convert_case-0.5.0/src/pattern.rs:
+/home/izy/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/convert_case-0.5.0/src/segmentation.rs:
