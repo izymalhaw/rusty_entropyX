@@ -1,6 +1,0 @@
-/target
-/Cargo.lock
-/web/node_modules
-/nodejs/entropyx-wallet
-/nodejs/node_modules
-/nodejs/package-lock.json

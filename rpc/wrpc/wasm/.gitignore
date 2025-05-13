@@ -1,6 +1,0 @@
-/target
-/Cargo.lock
-/web/entropyx-rpc
-/nodejs/entropyx-rpc
-/nodejs/node_modules
-/nodejs/package-lock.json
